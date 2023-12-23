@@ -20,7 +20,7 @@ it isn't such a clear cut problem and things can start to get tricky.
 To handle these trickier scenarios,
 many solutions available today do just one or two things *really well*.
 For example, BLoC is great at separating complex state logic from UI code via the reducer pattern.
-Riverpod, Signal, and Recoil are fantastic in regards to data modeling and data flow,
+Riverpod, Signals, and Recoil are fantastic in regards to data modeling and data flow,
 at least once you wrap your head around the whole reactive paradigm.
 Although not ideal for state management (which would be a whole blog post on its own),
 streams are still great at representing transformations on individualized and discrete data.
@@ -102,7 +102,7 @@ As such, in our networking example above,
 we can assemble the individual features (network request, cache, and invalidation)
 together into a tree.
 
-[^1]: Even if you are not using something like Riverpod/Signal/Recoil, dependency inversion techniques and libraries like Guice actually do result in dependency graphs.
+[^1]: Even if you are not using something like Riverpod/Signals/Recoil, dependency inversion techniques and libraries like Guice actually do result in dependency graphs.
 
 ### In Code
 Let's again consider our network + cache + invalidation example.
@@ -144,7 +144,7 @@ hooks shine due to their easy composability.
 There's just one big issue with hooks:
 they only work within widgets for [ephemeral state](https://docs.flutter.dev/data-and-backend/state-mgmt/ephemeral-vs-app).
 
-And that is where we come to our next approach: ReArch.
+And that is where we come to our next approach: [ReArch](https://github.com/gregoryconrad/rearch-dart/).
 
 > Disclaimer: I am the author of ReArch.
 While I would love ReArch to get some exposure as a result of this post,
@@ -211,7 +211,7 @@ for some application-level state in ReArch:
 
 ReArch is also the subject of my Master's Thesis,
 and I have spent the better part of a year honing and improving it[^3].
-If you are familiar with Hooks/Riverpod/Signal/Recoil,
+If you are familiar with Hooks/Riverpod/Signals/Recoil,
 ReArch should feel exceedingly natural to you.
 ReArch also supports the reducer pattern that is employed by BLoC
 for particularly complex state relations.
