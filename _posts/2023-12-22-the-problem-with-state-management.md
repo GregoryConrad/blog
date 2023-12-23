@@ -4,8 +4,8 @@ title:  "The Problem With State Management, and Why It Shouldn’t Be a Problem"
 date:   2023-12-22
 ---
 
-# TODO link in line below
-> This few-minute and bite-sized read is condensed from my recently-completed [Master's Thesis]().
+> This few-minute and bite-sized read is condensed from my recently-completed
+[Master's Thesis](/thesis.pdf).
 Go take a look at it after you're done here if you want to learn more!
 
 In case you haven’t noticed, there are more state management frameworks than atoms in the universe,
