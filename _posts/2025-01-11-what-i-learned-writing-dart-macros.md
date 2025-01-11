@@ -176,8 +176,7 @@ final widgetCodeParts = [
 I think we can all agree that the above looks horrendous[^1].
 So what do we need? Well, we have two options.
 
-[^1]: You can argue that you can split the list up into a few variables to help with readability, \
-but it should be clear that we shouldn't be using a list for this.
+[^1]: You can argue that you can split the list up into a few variables to help with readability, but it should be clear that we shouldn't be using a list for this.
 
 The first is [quasiquoting](https://github.com/dart-lang/language/issues/1989).
 Obviously, the Dart language does not (yet) have quasiquoting support,
@@ -192,6 +191,7 @@ but there's one catch: it's for `build_runner`, not macros.
 So, there's no _proper_ solution to this problem at the moment.
 In the meantime, I have developed my own "quasi-quasiquoting" approach,
 which sits in at just a few dozen lines of code:
+{% raw %}
 ```dart
 // I release this snippet to the public domain; feel free to use it in your own projects.
 // If there was enough demand, I could release a package, but a copy+paste is easy enough.
@@ -248,6 +248,7 @@ extension _ToDeclarationCode on List<Object> {
   DeclarationCode toDeclarationCode() => DeclarationCode.fromParts(this);
 }
 ```
+{% endraw %}
 
 While the above quasi-quasiquoting works, it's not my favorite.
 I _think_ I would personally prefer a declarative source code generator
