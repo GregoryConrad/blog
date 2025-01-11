@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "What I Learned From Writing My First Dart Macros"
-date:   2025-01-02
+date:   2025-01-11
 ---
 
 I recently decided to write some Widget-related macros for [ReArch],
